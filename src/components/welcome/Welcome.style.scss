@@ -1,0 +1,29 @@
+.welcome-page{
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 1.2rem;
+
+        label:first-child{
+            font-size: 3rem;
+            color: purple;
+            font-weight: bold;
+        } 
+
+        input{
+            border: 1px solid purple;
+            padding: 1rem;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        button{
+        //   margin-top: 1rem;  
+        }
+    }
+   
+}
