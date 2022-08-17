@@ -1,0 +1,35 @@
+@mixin random-bgr() {
+    color: rgb(random(255), random(255), random(255));
+}
+
+.user-data{
+    // @include random-bgr();
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background: rgba(227, 97, 253, 0.06);
+    border-bottom-right-radius: 30px;
+}
+
+.name{
+    @include random-bgr();
+}
+
+.enter-score{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input{
+        padding: 1rem;
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        border: none;
+        border-bottom: 1px solid black;
+        font-size: 1.5rem;
+        outline: none;
+        text-align: center;
+    }
+}

@@ -1,0 +1,41 @@
+.board {
+    width: 800px;
+    height: 80px;
+    display: flex;
+    border: 5px solid black;
+    //border-left: none;
+
+    .board-element{
+        border-left: 1px solid black;
+        height: 100%;
+        width: 10%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        label{
+            height: 48%;
+            width: 33%;
+        }
+
+        label:nth-child(2),
+        .bonus{
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        label:last-child{
+            width: 100%;
+        }
+
+        .spare{
+            border-top: 30px solid white;
+            border-right: 25px solid black;
+        }
+
+        .strike{
+            background: black;
+        }
+
+    }
+}

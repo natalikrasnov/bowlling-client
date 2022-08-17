@@ -1,0 +1,12 @@
+.notfound-page{
+    display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 1.2rem;
+    
+        label:first-child {
+            font-size: 3rem;
+            color: blue;
+            font-weight: bold;
+        }
+}
