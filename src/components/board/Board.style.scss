@@ -2,26 +2,30 @@
     width: 800px;
     height: 80px;
     display: flex;
-    border: 5px solid black;
+    border: 5px solid rgb(random(255), random(255), random(255));
     //border-left: none;
 
     .board-element{
-        border-left: 1px solid black;
+        border-left: 1px solid rgb(random(255), random(255), random(255));
         height: 100%;
         width: 10%;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
 
+        &:first-child{
+            border: none;
+        }
+
         label{
-            height: 48%;
-            width: 33%;
+            height: 48%;                 
+            width: 32%;
         }
 
         label:nth-child(2),
         .bonus{
-            border-left: 1px solid black;
-            border-bottom: 1px solid black;
+            border-left: 1px solid rgb(random(255), random(255), random(255));
+            border-bottom: 1px solid rgb(random(255), random(255), random(255));
         }
 
         label:last-child{
@@ -29,8 +33,8 @@
         }
 
         .spare{
-            border-top: 30px solid white;
-            border-right: 25px solid black;
+            border-top: 33px solid white;
+            border-right: 26px solid black;
         }
 
         .strike{

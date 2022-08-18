@@ -1,19 +1,22 @@
-@mixin random-bgr() {
+@mixin random-bgr-color() {
     color: rgb(random(255), random(255), random(255));
+}
+@mixin random-bgr-background() {
+    background: rgb(random(255), random(255), random(255), 0.2);
 }
 
 .user-data{
-    // @include random-bgr();
+    @include random-bgr-background();
     position: absolute;
     top: 0;
     left: 0;
     padding: 20px;
-    background: rgba(227, 97, 253, 0.06);
+    //background: rgba(227, 97, 253, 0.06);
     border-bottom-right-radius: 30px;
 }
 
 .name{
-    @include random-bgr();
+    @include random-bgr-color();
 }
 
 .enter-score{
@@ -32,4 +35,21 @@
         outline: none;
         text-align: center;
     }
+}
+
+.final-score{
+    @include random-bgr-color();
+    font-size: 2rem;
+    border: 2px solid rgb(random(255), random(255), random(255), 0.2);
+    position: relative;
+   top: 70px;
+}
+
+.to-scores{
+    @include random-bgr-background();
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0.8rem;
+    margin: 1rem;
 }

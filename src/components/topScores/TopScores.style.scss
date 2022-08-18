@@ -1,0 +1,38 @@
+.top-scores{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    font-size: 1.5rem;
+    gap:2rem;
+    justify-content: center;
+    align-items: center;
+
+    .user-score{
+        font-size: 2.5rem;
+        color:rgb(random(255), random(255), random(255));
+        position: absolute;
+        top: 100px;
+    }
+    .title{
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        color: rgb(random(255), random(255), random(255));
+    }
+    .top-score_row{
+        display: flex;
+        gap: 3rem;
+        align-self: baseline;
+        
+
+        .place{
+            font-weight: bold;
+            color: rgb(random(255), random(255), random(255));
+        }
+
+        span{
+            label:last-child{
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
