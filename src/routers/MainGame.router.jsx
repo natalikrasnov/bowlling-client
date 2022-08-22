@@ -1,18 +1,20 @@
-import React, { useContext } from 'react';
-import { Navigate, Route } from 'react-router-dom';
+import React, {useEffect} from 'react';
+import { useNavigate, Outlet, useLocation } from 'react-router-dom';
 
-const MainGameRouter = ({ component: Component, ...rest }) => {
+const MainGameRouter = ({path, children}) => {
+    const location = useLocation()
+    const { userName } = location.state ? location.state :{}
 
-    return (
-        <Route
-            { ...rest }
-            element={(props) => (
-                console.log("MainGameRouter props", props) &&
-                !!props.name ?
-                     <Navigate replace to='/welcome' />:
-                    <element { ...props } />
-            ) }
-        />);
+    const navigate = useNavigate()
+
+    useEffect(() => { 
+        if (!userName) {
+            alert("please enter your name to start this game")   
+           return navigate(path)
+        }
+    }, [])
+
+    return children ? children : <Outlet />
 };
 
 export default MainGameRouter;

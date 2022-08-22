@@ -13,19 +13,8 @@ function MainGame() {
     const location = useLocation()
     const { userName } = location.state ? location.state :{}
 
-    const navigate = useNavigate()
-
     const [isGameEnded, setIsGameEnded] = useState(false) 
     const { scores, dispatchScores } = useContext(GameContext);
-
-
-    useEffect(() => { 
-        if (!userName) {
-            alert("please enter your name to start this game")   
-            navigate('/welcome'  )
-        }
-    }, [])
-
     
     useEffect(() => {
         if(isGameEnded) return

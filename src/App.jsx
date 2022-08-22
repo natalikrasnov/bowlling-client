@@ -19,7 +19,13 @@ function App() {
       <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/welcome" element={<Welcome/>}/>
-          <Route path="/game" element={<GameContextProvider><MainGame /></GameContextProvider>} />
+          <Route path="/game" element={
+            <GameContextProvider>
+              <MainGameRouter path='/welcome'>
+                 <MainGame />
+              </MainGameRouter>
+            </GameContextProvider>
+          } />
         <Route path="/scores" element={<TopScores />}/>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
